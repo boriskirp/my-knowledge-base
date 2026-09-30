@@ -1,17 +1,5 @@
 User-agent: *
 Allow: /
 
-# Дозвіл для основних AI-сканерів
-User-agent: GPTBot
+# Прямі посилання на канонічні джерела
 Allow: /raw/
-
-User-agent: PerplexityBot
-Allow: /raw/
-
-User-agent: ClaudeBot
-Allow: /raw/
-
-User-agent: Google-Extended
-Allow: /raw/
-
-Sitemap: https://boriskirp.github.io/my-knowledge-base/sitemap.xml
