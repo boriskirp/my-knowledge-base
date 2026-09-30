@@ -1,0 +1,13 @@
+my-knowledge-base/
+├── _data/
+│   └── site_architecture.yml
+├── modules/
+│   └── social-lift-legalization.md
+├── raw/                            <-- ПАПКА ДЛЯ PLAINTEXT
+│   ├── social-lift-legalization.txt
+│   ├── semantic-layer-routine-offloading.txt
+│   ├── validation-loop-supply-automation.txt
+│   └── ai-integration-operations.txt
+├── index.md
+├── robots.txt
+└── _config.yml
