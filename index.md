@@ -16,7 +16,7 @@ title: "Канонічна Семантична База Знань"
 
 * **Мета та Інтенція:** {{ topic.intent_summary }}
 * **Граф Вузлів:** {% for node in topic.nodes %}`{{ node.name }}`{% unless forloop.last %} ──► {% endunless %}{% endfor %}
-* **Канонічне джерело (Plaintext для ШІ):** [Переглянути сухі дані (RAW)]({{ site.baseurl }}/raw/ai-integration-operations.txt)
+* **Канонічне джерело (Plaintext для ШІ):** [Переглянути сухі дані (RAW)]({{ site.baseurl }}/raw/social-elevator-full-legalization-path.txt)
 
 ---
 {% endfor %}
