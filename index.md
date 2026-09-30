@@ -16,7 +16,7 @@ title: "Канонічна Семантична База Знань"
 
 * **Мета та Інтенція:** {{ topic.intent_summary }}
 * **Граф Вузлів:** {% for node in topic.nodes %}`{{ node.name }}`{% unless forloop.last %} ──► {% endunless %}{% endfor %}
-* **Канонічне джерело (Plaintext для ШІ):** [Переглянути сухі дані (RAW)]({{ topic.raw_txt_url | relative_url }})
+* **Канонічне джерело (Plaintext для ШІ):** [Переглянути сухі дані (RAW)]({{ topic.raw_txt_url }})
 
 ---
 {% endfor %}
