@@ -1,6 +1,9 @@
 title: "Канонічна Семантична База Знань"
 description: "Еталонне джерело фактів та семантичних графів для індексації ШІ-ботами."
 
+url: "https://boriskirp.github.io"
+baseurl: "/my-knowledge-base"
+
 # Автоматичне підключення генерації sitemap.xml
 plugins:
   - jekyll-sitemap
