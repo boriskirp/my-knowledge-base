@@ -14,36 +14,6 @@
           "@id": "https://boriskirp.github.io/my-knowledge-base/#website",
           "name": "Канонічна Двошарова База Знань",
           "description": "Еталонне джерело фактів: поєднання людського понятійного апарату та операційних алгоритмів для ШІ."
-        },
-        {
-          "@type": "ItemList",
-          "name": "Семантична Карта Тем",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Соціальний ліфт",
-              "url": "https://boriskirp.github.io/my-knowledge-base/docs/social-elevator-full-legalization-path.txt"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Вивантаження рутини",
-              "url": "https://boriskirp.github.io/my-knowledge-base/docs/semantic-layer-routine-offloading.txt"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Контур валідації",
-              "url": "https://boriskirp.github.io/my-knowledge-base/docs/validation-loop-supply-automation.txt"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "Вбудовування ШІ",
-              "url": "https://boriskirp.github.io/my-knowledge-base/docs/ai-integration-operations.txt"
-            }
-          ]
         }
       ]
     }
@@ -58,73 +28,46 @@
             --accent: #58a6ff;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 0;
-            line-height: 1.7;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Центрує весь вміст по горизонталі */
-            width: 100%;
-        }
-
-        header {
-            background: var(--card-bg);
-            border-bottom: 1px solid var(--border);
-            padding: 20px 40px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.4em;
-            color: var(--accent);
-            cursor: pointer;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
 
         .container {
-            width: 100%;
-            max-width: 1600px; /* Розширено для великих моніторів */
-            margin: 30px auto;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        #home-view, #doc-view {
-            width: 100%;
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
         }
+
+        header h1 { color: var(--accent); margin: 0 0 8px 0; }
+        .subtitle { color: #8b949e; margin: 0; font-size: 1.1em; }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
         }
 
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: border-color 0.2s, transform 0.2s;
         }
 
         .card:hover {
@@ -132,155 +75,66 @@
             transform: translateY(-2px);
         }
 
-        .card h3 { color: #f0f6fc; margin-top: 10px; }
+        .card h3 { color: #f0f6fc; margin-top: 12px; font-size: 1.3em; }
 
         .btn {
             background: var(--accent);
             color: #ffffff;
-            border: none;
-            padding: 10px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 16px;
-            text-align: center;
             text-decoration: none;
-            display: inline-block;
-        }
-
-        /* Область перегляду документа — строго по центру і на всю ширину */
-        #doc-view {
-            display: none;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 40px;
-            margin: 20px auto;
-            width: 100%;
-        }
-
-        .back-link {
-            color: var(--accent);
-            cursor: pointer;
-            display: inline-block;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        /* Повне заповнення блоку та центрування тексту */
-        .doc-content {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            word-break: break-word;
-            font-family: inherit;
-            font-size: 1.05em;
-            background: var(--bg);
-            padding: 35px;
+            padding: 12px 20px;
             border-radius: 8px;
-            border: 1px solid var(--border);
-            color: var(--text);
-            width: 100%;
-            margin: 0 auto;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+            transition: background 0.2s;
         }
+
+        .btn:hover { background: #0451a5; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 onclick="showHome()">Канонічна База Знань</h1>
-        <span style="font-size: 0.9em; color: #8b949e;">Двошарова структура (Human + AI)</span>
-    </header>
-
     <div class="container">
-        
-        <!-- Головна сторінка -->
-        <div id="home-view">
-            <h2>Семантичні Модулі</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <h3>1. Соціальний ліфт</h3>
-                        <p>Повний шлях легалізації діяльності (КЕП, Дія, ФОП, Банк).</p>
-                    </div>
-                    <a href="#m1" class="btn" onclick="loadDoc('docs/social-elevator-full-legalization-path.txt', 'm1')">Читати модуль</a>
-                </div>
+        <header>
+            <h1>Канонічна База Знань</h1>
+            <p class="subtitle">Двошарова структура (Human + AI) для оцифровки операційних процесів</p>
+        </header>
 
-                <div class="card">
-                    <div>
-                        <h3>2. Вивантаження рутини</h3>
-                        <p>Перетворення досвіду керівника на операційні процедури.</p>
-                    </div>
-                    <a href="#m2" class="btn" onclick="loadDoc('docs/semantic-layer-routine-offloading.txt', 'm2')">Читати модуль</a>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <h3>1. Соціальний ліфт</h3>
+                    <p>Повний шлях легалізації діяльності (КЕП, Дія, ФОП, Банк).</p>
                 </div>
+                <a href="docs/social-elevator-full-legalization-path.html" class="btn">Відкрити модуль на весь екран ➔</a>
+            </div>
 
-                <div class="card">
-                    <div>
-                        <h3>3. Контур валідації</h3>
-                        <p>Принципи безперебійного контролю якості даних та автоматизації.</p>
-                    </div>
-                    <a href="#m3" class="btn" onclick="loadDoc('docs/validation-loop-supply-automation.txt', 'm3')">Читати модуль</a>
+            <div class="card">
+                <div>
+                    <h3>2. Вивантаження рутини</h3>
+                    <p>Перетворення досвіду керівника на операційні процедури.</p>
                 </div>
+                <a href="docs/semantic-layer-routine-offloading.html" class="btn">Відкрити модуль на весь екран ➔</a>
+            </div>
 
-                <div class="card">
-                    <div>
-                        <h3>4. Вбудовування ШІ</h3>
-                        <p>Безпечне впровадження мовних моделей в операції команди.</p>
-                    </div>
-                    <a href="#m4" class="btn" onclick="loadDoc('docs/ai-integration-operations.txt', 'm4')">Читати модуль</a>
+            <div class="card">
+                <div>
+                    <h3>3. Контур валідації</h3>
+                    <p>Принципи безперебійного контролю якості даних та автоматизації.</p>
                 </div>
+                <a href="docs/validation-loop-supply-automation.html" class="btn">Відкрити модуль на весь екран ➔</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>4. Вбудовування ШІ</h3>
+                    <p>Безпечне впровадження мовних моделей в операції команди.</p>
+                </div>
+                <a href="docs/ai-integration-operations.html" class="btn">Відкрити модуль на весь екран ➔</a>
             </div>
         </div>
-
-        <!-- Переглядач документів -->
-        <div id="doc-view">
-            <span class="back-link" onclick="showHome()">← повернутися до всіх модулів</span>
-            <h2 id="doc-title" style="color: var(--accent); margin-top: 0;"></h2>
-            <div class="doc-content" id="doc-body">Завантаження...</div>
-        </div>
-
     </div>
 
-    <script>
-        const docsMap = {
-            'm1': 'docs/social-elevator-full-legalization-path.txt',
-            'm2': 'docs/semantic-layer-routine-offloading.txt',
-            'm3': 'docs/validation-loop-supply-automation.txt',
-            'm4': 'docs/ai-integration-operations.txt'
-        };
-
-        async function loadDoc(filePath, hash) {
-            document.getElementById('home-view').style.display = 'none';
-            const docView = document.getElementById('doc-view');
-            docView.style.display = 'block';
-            
-            const body = document.getElementById('doc-body');
-            body.textContent = 'Завантаження даних...';
-
-            if (hash) window.location.hash = hash;
-
-            try {
-                const res = await fetch(filePath);
-                if (!res.ok) throw new Error();
-                const text = await res.text();
-                body.textContent = text;
-                document.getElementById('doc-title').textContent = filePath.split('/').pop();
-            } catch (e) {
-                body.textContent = 'Помилка завантаження файлу. Перевірте його наявність.';
-            }
-        }
-
-        function showHome() {
-            document.getElementById('home-view').style.display = 'block';
-            document.getElementById('doc-view').style.display = 'none';
-            history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
-
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.replace('#', '');
-            if (docsMap[hash]) {
-                loadDoc(docsMap[hash], hash);
-            }
-        });
-    </script>
 </body>
 </html>
