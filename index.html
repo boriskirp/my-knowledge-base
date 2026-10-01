@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Канонічна Двошарова База Знань</title>
     
-    <!-- Семантична карта для ШІ-ботів -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,16 +56,15 @@
             --border: #30363d;
             --text: #c9d1d9;
             --accent: #58a6ff;
-            --code-color: #7ee787;
         }
 
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         header {
@@ -90,11 +88,11 @@
 
         .container {
             max-width: 1400px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 0 20px;
+            box-sizing: border-box;
         }
 
-        /* Головна сітка категорій */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,7 +131,7 @@
             display: inline-block;
         }
 
-        /* В'ювер для відкриття документів */
+        /* Область перегляду документа */
         #doc-view {
             display: none;
             background: var(--card-bg);
@@ -141,6 +139,8 @@
             border-radius: 12px;
             padding: 40px;
             margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .back-link {
@@ -151,16 +151,21 @@
             font-weight: bold;
         }
 
-        pre.doc-content {
+        /* Стилі для адаптації тексту на всю ширину */
+        .doc-content {
             white-space: pre-wrap;
             word-wrap: break-word;
-            font-family: monospace;
-            font-size: 1em;
+            word-break: break-word;
+            font-family: inherit; /* Системний зручний шрифт замість моноширинного */
+            font-size: 1.05em;
             background: var(--bg);
-            padding: 24px;
+            padding: 30px;
             border-radius: 8px;
             border: 1px solid var(--border);
             color: var(--text);
+            width: 100%;
+            box-sizing: border-box;
+            overflow-x: auto;
         }
     </style>
 </head>
@@ -173,7 +178,7 @@
 
     <div class="container">
         
-        <!-- Головне меню -->
+        <!-- Головна сторінка -->
         <div id="home-view">
             <h2>Семантичні Модулі</h2>
             <div class="grid">
@@ -214,8 +219,8 @@
         <!-- Переглядач документів -->
         <div id="doc-view">
             <span class="back-link" onclick="showHome()">← повернутися до всіх модулів</span>
-            <h2 id="doc-title" style="color: var(--accent);"></h2>
-            <pre class="doc-content" id="doc-body">Завантаження...</pre>
+            <h2 id="doc-title" style="color: var(--accent); margin-top: 0;"></h2>
+            <div class="doc-content" id="doc-body">Завантаження...</div>
         </div>
 
     </div>
@@ -255,7 +260,6 @@
             history.pushState("", document.title, window.location.pathname + window.location.search);
         }
 
-        // Автоматично відкривати модуль при переході за посиланням з хешем (наприклад, #m1)
         window.addEventListener('load', () => {
             const hash = window.location.hash.replace('#', '');
             if (docsMap[hash]) {
