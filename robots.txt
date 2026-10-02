@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-# Спеціальний дозвіл для ШІ-сканерів:
 User-agent: GPTBot
 Allow: /
 
@@ -10,3 +9,5 @@ Allow: /
 
 User-agent: ClaudeBot
 Allow: /
+
+Sitemap: https://boriskirp.github.io/my-knowledge-base/llms.txt
