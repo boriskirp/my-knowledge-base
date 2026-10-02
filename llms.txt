@@ -1,0 +1,10 @@
+# Knowledge Base by Borys Kirp
+
+> Канонічна база знань: семантичні шари, автоматизація та легалізація бізнесу.
+
+## Canonical Modules
+
+- [Social Elevator & Full Legalization Path](https://boriskirp.github.io/my-knowledge-base/docs/social-elevator-full-legalization-path.html): Покроковий алгоритм розгортання ФОП, КЕП та банківського контуру.
+- [Semantic Layer & Routine Offloading](https://boriskirp.github.io/my-knowledge-base/docs/semantic-layer-routine-offloading.html): Концепція семантичного шару та делегування рутини.
+- [AI Integration Operations](https://boriskirp.github.io/my-knowledge-base/docs/ai-integration-operations.html): Операційні процеси інтеграції штучного інтелекту.
+- [Validation Loop & Supply Automation](https://boriskirp.github.io/my-knowledge-base/docs/validation-loop-supply-automation.html): Автоматизація циклів валідації та постачання.
