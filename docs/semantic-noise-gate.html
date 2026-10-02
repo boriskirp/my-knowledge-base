@@ -2,17 +2,152 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Модуль 05: Семантичний Шлюз</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 05: Семантичний Шлюз (Semantic Noise Gate Protocol)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --code-bg: #1f242c;
+            --code-color: #7ee787;
+            --danger: #f85149;
+            --warning: #d29922;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: rgba(88, 166, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        h1 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-top: 0; font-size: 2em; }
+        h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 36px; }
+
+        .activation-card {
+            background: rgba(248, 81, 73, 0.08);
+            border: 1px solid var(--danger);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .activation-card strong { color: #ff7b72; }
+
+        .scheme-box {
+            background: var(--bg);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 25px 0;
+        }
+
+        .step-block {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            color: #f0f6fc;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+        }
+    </style>
 </head>
 <body>
-    <h1>СИСТЕМНИЙ ПРОТОКОЛ: ОЧИЩЕННЯ ТА АКТИВАЦІЯ ЗНАНИЙ</h1>
-    <p><strong>Роль:</strong> Ти — Семантичний Архитектор.</p>
-    
-    <h2>3-кроковий алгоритм:</h2>
-    <ol>
-        <li><strong>Відсічи хаос (Noise Filtering):</strong> Видали всі вступні ввічливості, емоції та шум.</li>
-        <li><strong>Визнач сенс (Semantic Alignment):</strong> Переклади хаотичні слова на мову Канонічних Термінів.</li>
-        <li><strong>Активуй дію (Execution):</strong> Видай відповідь у вигляді чіткого алгоритму чи інструкції.</li>
-    </ol>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Повернутися до Головного меню</a>
+
+        <h1>Модуль 05: Протокол відсікання шуму, визначення сенсу та активації дій (Semantic Noise Gate)</h1>
+
+        <!-- 1. ТЕМА & ВХІДНИЙ СЕНС -->
+        <h2>1. Тема: Хаос чи Точний Алгоритм?</h2>
+        
+        <div class="activation-card">
+            <strong>💡 Сенс від Майстра:</strong>
+            ШІ дзеркалить рівень запиту користувача. Хаотичний, емоційний чи неструктурований запит змушує модель видавати поверхневі узагальнення, галюцинації та «воду». ШІ без семантичного фільтра витрачає обчислювальний контекст на обробку шуму замість виконання задачі.
+            <br><br>
+            <strong>Альтернатива:</strong> Вбудувати автономний семантичний шлюз (Middleware Prompt), який фільтрує вхідні дані, перекладає хаос на мову канонічних термінів і активує точну дію ще до формування відповіді.
+        </div>
+
+        <!-- 2. СХЕМА АКТИВАЦІЇ -->
+        <h2>2. Організаційна структура протоколу</h2>
+        <div class="scheme-box">
+            Хаотичний запит ──► 1. Відсічи шум ──► 2. Визнач сенс ──► 3. Активуй дію (Результат)
+        </div>
+
+        <!-- 3. КРОКИ ТА ПРИКЛАДИ -->
+        <h2>3. Покрокове розгортання та застосування</h2>
+
+        <div class="step-block">
+            <div class="step-title">Крок 1. Noise Filtering (Відсіч шуму)</div>
+            <p><strong>Що це:</strong> Автоматичне очищення вхідного запиту від когнітивного та текстуального баласту.</p>
+            <p><strong>Як застосовувати:</strong> Модель вилучає вступні привітання, ввічливості, емоційні оцінки, суперечливі вступні деталі та розмиті припущення.</p>
+            <p><strong>Результат:</strong> Виділення сухих фактів, вихідних параметрів та кінцевої мети користувача у форматі <code>Clean Input</code>.</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Крок 2. Semantic Alignment (Визначення сенсу)</div>
+            <p><strong>Що це:</strong> Проекція очищеного запиту на канонічну понятійну сітку бази знань.</p>
+            <p><strong>Як застосовувати:</strong> Переклад побутових або хаотичних фраз користувача на професійні канонічні терміни (наприклад: <i>«хочу торгувати в інеті і не мати проблем»</i> ➔ <code>Легалізація бізнесу / ФОП 3 група / КЕП</code>).</p>
+            <p><strong>Результат:</strong> Точна маршрутизація до конкретного модуля знань (Module 01 - Module 04) без галюцинацій.</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Крок 3. Execution (Активація дії)</div>
+            <p><strong>Що це:</strong> Перехід від абстрактних міркувань до видачі конкретного рішення.</p>
+            <p><strong>Як застосовувати:</strong> ШІ формує відповідь ВИКЛЮЧНО у вигляді чіткого регламенту, покрокового алгоритму, таблиці дій або виклику API-функції.</p>
+            <p><strong>Результат:</strong> Користувач отримує готовий до виконання інженерний або бізнес-результат замість текстової теорії.</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
