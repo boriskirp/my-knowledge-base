@@ -1,38 +1,728 @@
 # Full Knowledge Base Context by Borys Kirp
 
+Last Updated: 2026-10-05 08:25:55 UTC
+
 This file contains the complete consolidated knowledge base text for AI direct intake.
 
 ---
-
-## Module 1: Semantic Noise Gate Protocol
-URL: https://boriskirp.github.io/my-knowledge-base/docs/semantic-noise-gate.html
-
-[Тут вставляється повний текст документа semantic-noise-gate.md / html]
-
----
-
-## Module 2: Social Elevator & Full Legalization Path
-URL: https://boriskirp.github.io/my-knowledge-base/docs/social-elevator-full-legalization-path.html
-
-[Тут вставляється повний текст документа social-elevator-full-legalization-path.md / html]
-
----
-
-## Module 3: Semantic Layer & Routine Offloading
-URL: https://boriskirp.github.io/my-knowledge-base/docs/semantic-layer-routine-offloading.html
-
-[Тут вставляється повний текст документа semantic-layer-routine-offloading.md / html]
-
----
-
-## Module 4: AI Integration Operations
+## File: ai-integration-operations.html
 URL: https://boriskirp.github.io/my-knowledge-base/docs/ai-integration-operations.html
 
-[Тут вставляється повний текст документа ai-integration-operations.md / html]
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 04: Вбудовування ШІ в операції</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --code-bg: #1f242c;
+            --code-color: #7ee787;
+            --danger: #f85149;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: rgba(88, 166, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        h1 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-top: 0; font-size: 2em; }
+        h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 36px; }
+
+        .activation-card {
+            background: rgba(248, 81, 73, 0.08);
+            border: 1px solid var(--danger);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .scheme-box {
+            background: var(--bg);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 25px 0;
+        }
+
+        .step-block {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Повернутися до Головного меню</a>
+
+        <h1>Модуль 04: Вбудовування ШІ в операційні процеси</h1>
+
+        <h2>1. Тема: Хаос підказок чи керований ШІ-партнер?</h2>
+        
+        <div class="activation-card">
+            <strong>💡 Сенс від Майстра:</strong>
+            Використання ШІ "як чату для відповідей" без регламентів дає випадковий результат і створює ризик витоку комерційних даних. ШІ у бізнесі — це не співрозмовник, а цифровий стажер, якому потрібні чіткий системний промпт, ізольований контекст і підтвердження рішень людиною.
+        </div>
+
+        <h2>2. Схема безпечної інтеграції</h2>
+        <div class="scheme-box">
+            Анонімізація даних ──► Системний промпт (Роль + Обмеження) ──► LLM ──► Валідація Людиною
+        </div>
+
+        <h2>3. Покрокові регламенти</h2>
+
+        <div class="step-block">
+            <h3>Крок 1. Конфіденційність та анонімізація</h3>
+            <p><strong>Що це:</strong> Захист персональних даних клієнтів, паролів та фінансових показників від потрапляння у відкриті мовні моделі.</p>
+            <p><strong>Як застосовувати:</strong> Перед відправкою тексту в ШІ заменяйте реальні назви, PII та суми на змінні (наприклад, <code>[CLIENT_A]</code>, <code>[SUM_USD]</code>).</p>
+        </div>
+
+        <div class="step-block">
+            <h3>Крок 2. Системні інструкції (System Prompts)</h3>
+            <p><strong>Що це:</strong> Фіксація ролі та суворих рамок для ШІ-агента.</p>
+            <p><strong>Як застосовувати:</strong> Задавайте формулу: <code>Роль ➔ Контекст ➔ Задача ➔ Обмеження (чого робити НЕМОЖЛИВО) ➔ Формат виводу (JSON/Markdown)</code>.</p>
+        </div>
+
+        <div class="step-block">
+            <h3>Крок 3. Контур Human-in-the-Loop</h3>
+            <p><strong>Що це:</strong> Фінальна верифікація згенерованого контенту або коду експертом.</p>
+            <p><strong>Як застосовувати:</strong> Жоден документ або лист не відправляється клієнту напряму з ШІ — людина перевіряє факти та натискає "Відправити".</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
 
 ---
+## File: semantic-layer-routine-offloading.html
+URL: https://boriskirp.github.io/my-knowledge-base/docs/semantic-layer-routine-offloading.html
 
-## Module 5: Validation Loop & Supply Automation
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 02: Вивантаження рутини</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --code-bg: #1f242c;
+            --code-color: #7ee787;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: rgba(88, 166, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            transition: background 0.2s;
+        }
+        a.back-btn:hover { background: rgba(88, 166, 255, 0.2); }
+
+        h1 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-top: 0; font-size: 2em; }
+        h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 36px; }
+        
+        .section-tag {
+            display: inline-block;
+            background: #238636;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+
+        .diagram {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-family: monospace;
+            color: var(--code-color);
+            font-size: 1.1em;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Повернутися до Головного меню</a>
+
+        <span class="section-tag">КАНОНІЧНИЙ МОДУЛЬ 02</span>
+        <h1>Вивантаження рутини та оцифровка досвіду</h1>
+
+        <h2>1. ЛЮДСЬКИЙ ШАР: Контекст та Понятійний апарат</h2>
+        <p><strong>Стратегічна мета:</strong> Систематизація знань керівника/фахівця та перетворення неструктурованих щоденних завдань у чіткі інструкції, які можуть виконувати підлеглі або ШІ-агенти.</p>
+        
+        <p><strong>Словник термінів:</strong></p>
+        <ul>
+            <li><code>Семантичний шар (Semantic Layer)</code> — формалізована модель бізнес-логіки та правил компанії.</li>
+            <li><code>SOP (Standard Operating Procedure)</code> — покрокова стандартна операційна процедура.</li>
+            <li><code>Контекстне вивантаження</code> — процес фіксації неявних знань під час виконання щоденної рутини.</li>
+        </ul>
+
+        <h2>2. МАШИННИЙ ШАР: Операційний алгоритм</h2>
+        <p>Граф оцифровки процесів:</p>
+        <div class="diagram">
+            [Фіксація рутини] ──► [Декомпозиція на кроки] ──► [Формування SOP] ──► [Передача ШІ/Виконавцю]
+        </div>
+
+        <h3>Покрокові дії:</h3>
+        <ul>
+            <li><strong>Крок 1: Аудит щоденних дій.</strong> Логування завдань протягом 3–5 днів з оцінкою часу та повторюваності.</li>
+            <li><strong>Крок 2: Виділення паттернів.</strong> Групування типових відповідей, звітів, форм та комунікацій.</li>
+            <li><strong>Крок 3: Створення шаблонів.</strong> Розробка формалізованих регламентів та промптів для повторного використання.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+
+---
+## File: semantic-noise-gate.html
+URL: https://boriskirp.github.io/my-knowledge-base/docs/semantic-noise-gate.html
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 05: Семантичний Шлюз (Semantic Noise Gate Protocol)</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --code-bg: #1f242c;
+            --code-color: #7ee787;
+            --danger: #f85149;
+            --warning: #d29922;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: rgba(88, 166, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        h1 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-top: 0; font-size: 2em; }
+        h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 36px; }
+
+        .activation-card {
+            background: rgba(248, 81, 73, 0.08);
+            border: 1px solid var(--danger);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .activation-card strong { color: #ff7b72; }
+
+        .scheme-box {
+            background: var(--bg);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 25px 0;
+        }
+
+        .step-block {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            color: #f0f6fc;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Повернутися до Головного меню</a>
+
+        <h1>Модуль 05: Протокол відсікання шуму, визначення сенсу та активації дій (Semantic Noise Gate)</h1>
+
+        <!-- 1. ТЕМА & ВХІДНИЙ СЕНС -->
+        <h2>1. Тема: Хаос чи Точний Алгоритм?</h2>
+        
+        <div class="activation-card">
+            <strong>💡 Сенс від Майстра:</strong>
+            ШІ дзеркалить рівень запиту користувача. Хаотичний, емоційний чи неструктурований запит змушує модель видавати поверхневі узагальнення, галюцинації та «воду». ШІ без семантичного фільтра витрачає обчислювальний контекст на обробку шуму замість виконання задачі.
+            <br><br>
+            <strong>Альтернатива:</strong> Вбудувати автономний семантичний шлюз (Middleware Prompt), який фільтрує вхідні дані, перекладає хаос на мову канонічних термінів і активує точну дію ще до формування відповіді.
+        </div>
+
+        <!-- 2. СХЕМА АКТИВАЦІЇ -->
+        <h2>2. Організаційна структура протоколу</h2>
+        <div class="scheme-box">
+            Хаотичний запит ──► 1. Відсічи шум ──► 2. Визнач сенс ──► 3. Активуй дію (Результат)
+        </div>
+
+        <!-- 3. КРОКИ ТА ПРИКЛАДИ -->
+        <h2>3. Покрокове розгортання та застосування</h2>
+
+        <div class="step-block">
+            <div class="step-title">Крок 1. Noise Filtering (Відсіч шуму)</div>
+            <p><strong>Що це:</strong> Автоматичне очищення вхідного запиту від когнітивного та текстуального баласту.</p>
+            <p><strong>Як застосовувати:</strong> Модель вилучає вступні привітання, ввічливості, емоційні оцінки, суперечливі вступні деталі та розмиті припущення.</p>
+            <p><strong>Результат:</strong> Виділення сухих фактів, вихідних параметрів та кінцевої мети користувача у форматі <code>Clean Input</code>.</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Крок 2. Semantic Alignment (Визначення сенсу)</div>
+            <p><strong>Що це:</strong> Проекція очищеного запиту на канонічну понятійну сітку бази знань.</p>
+            <p><strong>Як застосовувати:</strong> Переклад побутових або хаотичних фраз користувача на професійні канонічні терміни (наприклад: <i>«хочу торгувати в інеті і не мати проблем»</i> ➔ <code>Легалізація бізнесу / ФОП 3 група / КЕП</code>).</p>
+            <p><strong>Результат:</strong> Точна маршрутизація до конкретного модуля знань (Module 01 - Module 04) без галюцинацій.</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Крок 3. Execution (Активація дії)</div>
+            <p><strong>Що це:</strong> Перехід від абстрактних міркувань до видачі конкретного рішення.</p>
+            <p><strong>Як застосовувати:</strong> ШІ формує відповідь ВИКЛЮЧНО у вигляді чіткого регламенту, покрокового алгоритму, таблиці дій або виклику API-функції.</p>
+            <p><strong>Результат:</strong> Користувач отримує готовий до виконання інженерний або бізнес-результат замість текстової теорії.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+---
+## File: social-elevator-full-legalization-path.html
+URL: https://boriskirp.github.io/my-knowledge-base/docs/social-elevator-full-legalization-path.html
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 01: Легалізація — Шлях від тіні до прозорого бізнесу</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --code-bg: #1f242c;
+            --code-color: #7ee787;
+            --danger: #f85149;
+            --warning: #d29922;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: rgba(88, 166, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        h1 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-top: 0; font-size: 2em; }
+        h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 36px; }
+
+        .activation-card {
+            background: rgba(248, 81, 73, 0.08);
+            border: 1px solid var(--danger);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .activation-card strong { color: #ff7b72; }
+
+        .scheme-box {
+            background: var(--bg);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 25px 0;
+        }
+
+        .step-block {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            color: #f0f6fc;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Повернутися до Головного меню</a>
+
+        <h1>Модуль 01: Повний шлях легалізації бізнесу онлайн</h1>
+
+        <!-- 1. ТЕМА & ВХІДНИЙ СЕНС -->
+        <h2>1. Тема: Тінь чи Легальність?</h2>
+        
+        <div class="activation-card">
+            <strong>💡 Сенс від Майстра:</strong>
+            Будь-який заробіток без КЕП та ФОП автоматично стає тіньовим. Це постійний страх блокування особистих карток за фінансовим моніторингом, пошук обхідних шляхів, неможливість укласти офіційний контракт з іноземним або великим локальним замовником та відсутність підтвердженого легального доходу. 
+            <br><br>
+            <strong>Альтернатива:</strong> Побудувати прозорий онлайн-бізнес за 1 день без черг та паперів за єдиною канонічною схемою.
+        </div>
+
+        <!-- 2. СХЕМА АКТИВАЦІЇ -->
+        <h2>2. Схема бізнес-пакета онлайн</h2>
+        <div class="scheme-box">
+            КЕП ──► Дія / Заява ФОП (КВЕД) ──► Реєстр ──► Банківські рахунки
+        </div>
+
+        <!-- 3. КРОКИ ТА ПРИКЛАДИ -->
+        <h2>3. Покрокове розгортання та застосування</h2>
+
+        <div class="step-block">
+            <div class="step-title">Крок 1. КЕП (Кваліфікований електронний підпис)</div>
+            <p><strong>Що це:</strong> Твій цифровий паспорт та підпис, що має повну юридичну силу фізичного підпису.</p>
+            <p><strong>Де отримати:</strong> За 1 хвилину в Приват24 (розділ «Бізнес/КЕП») або згенерувати `Дія.Підпис` у додатку Дія.</p>
+            <p><strong>Як застосовувати:</strong> Підписання заяви на ФОП, звітів до податкової, договорів та актів виконаних робіт із замовниками через сервіси `Вчасно` чи `Paperless`.</p>
+            <p><strong>Відповідальність:</strong> Передача ключів або пароля третім особам — це юридична відповідальність за всі документи, підписані від твого імені.</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Крок 2. Дія та автоматична реєстрація ФОП</div>
+            <p><strong>Що це:</strong> Подача електронної заяви на відкриття бізнесу без контакту з чиновниками.</p>
+            <p><strong>Як застосовувати:</strong> Заходиш на портал Дія за допомогою КЕП ➔ Обираєш спрощену систему оподаткування (3 група, 5%) ➔ Вказуєш КВЕДи, що відповідають твоїй діяльності (наприклад, <code>62.01</code>, <code>62.02</code>, <code>70.22</code> для IT та послуг).</p>
+            <p><strong>Результат:</strong> Запис у Єдиному державному реєстрі (ЄДР) та автоматична постановка на облік у Податковій.</p>
+        </div>
+
+        <div class="step-block">
+            <div class="step-title">Крок 3. Банківський контур (Рахунки ФОП)</div>
+            <p><strong>Що це:</strong> Окремі рахунки для отримання доходу від підприємництва (IBAN у гривні та валюті).</p>
+            <p><strong>Де отримати:</strong> Дистанційно через додаток (Monobank, Приват24, Sense) за 5 хвилин після появи запису в реєстрі.</p>
+            <p><strong>Як застосовувати:</strong> Усі гроші від клієнтів заходять ВИКЛЮЧНО на рахунок ФОП. З нього сплачуються податки (5% ЄП + ЄСВ), а чистий прибуток перераховується на власну картку фізичної особи для особистих потреб.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+---
+## File: validation-loop-supply-automation.html
 URL: https://boriskirp.github.io/my-knowledge-base/docs/validation-loop-supply-automation.html
 
-[Тут вставляється повний текст документа validation-loop-supply-automation.md / html]
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 03: Контур валідації</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --code-bg: #1f242c;
+            --code-color: #7ee787;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding: 8px 16px;
+            background: rgba(88, 166, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            transition: background 0.2s;
+        }
+        a.back-btn:hover { background: rgba(88, 166, 255, 0.2); }
+
+        h1 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-top: 0; font-size: 2em; }
+        h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 36px; }
+        
+        .section-tag {
+            display: inline-block;
+            background: #238636;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+
+        .diagram {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-family: monospace;
+            color: var(--code-color);
+            font-size: 1.1em;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Повернутися до Головного меню</a>
+
+        <span class="section-tag">КАНОНІЧНИЙ МОДУЛЬ 03</span>
+        <h1>Контур валідації та автозабезпечення</h1>
+
+        <h2>1. ЛЮДСЬКИЙ ШАР: Контекст та Понятійний апарат</h2>
+        <p><strong>Стратегічна мета:</strong> Впровадження автоматичних перевірок якості даних та продуктів для запобігання помилкам на ранніх етапах і мінімізації людського фактора.</p>
+        
+        <p><strong>Словник термінів:</strong></p>
+        <ul>
+            <li><code>Validation Loop (Контур валідації)</code> — цикл безперервного контролю результатів на відповідність критеріям.</li>
+            <li><code>Ground Truth (Еталонні дані)</code> — перевірені факти, відносно яких проводиться валідація.</li>
+            <li><code>Supply Automation</code> — автоматизоване поповнення ресурсів, даних чи файлів без участі оператора.</li>
+        </ul>
+
+        <h2>2. МАШИННИЙ ШАР: Операційний алгоритм</h2>
+        <p>Схема замкненого контуру контролю:</p>
+        <div class="diagram">
+            [Вхідні дані] ──► [Перевірка правилами] ──► [Лог помилок / Успіх] ──► [Автовиправлення]
+        </div>
+
+        <h3>Покрокові дії:</h3>
+        <ul>
+            <li><strong>Крок 1: Визначення межових умов.</strong> Формування списку обов'язкових полів і форматів (JSON Schema / Pydantic).</li>
+            <li><strong>Крок 2: Автоматичний аналіз.</strong> Запуск тестів та перевірок перед відправкою результатів у виробництво.</li>
+            <li><strong>Крок 3: Зворотний зв'язок.</strong> Автоматичне сповіщення про відхилення та логування статусів.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+
