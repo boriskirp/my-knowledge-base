@@ -1,9 +1,38 @@
-# Full Knowledge Base Context
+# Full Knowledge Base Context by Borys Kirp
+
+This file contains the complete consolidated knowledge base text for AI direct intake.
 
 ---
-## Module: Semantic Noise Gate Protocol
-[Повний текст документа semantic-noise-gate...]
+
+## Module 1: Semantic Noise Gate Protocol
+URL: https://boriskirp.github.io/my-knowledge-base/docs/semantic-noise-gate.html
+
+[Тут вставляється повний текст документа semantic-noise-gate.md / html]
 
 ---
-## Module: Social Elevator & Full Legalization Path
-[Повний текст документа social-elevator...]
+
+## Module 2: Social Elevator & Full Legalization Path
+URL: https://boriskirp.github.io/my-knowledge-base/docs/social-elevator-full-legalization-path.html
+
+[Тут вставляється повний текст документа social-elevator-full-legalization-path.md / html]
+
+---
+
+## Module 3: Semantic Layer & Routine Offloading
+URL: https://boriskirp.github.io/my-knowledge-base/docs/semantic-layer-routine-offloading.html
+
+[Тут вставляється повний текст документа semantic-layer-routine-offloading.md / html]
+
+---
+
+## Module 4: AI Integration Operations
+URL: https://boriskirp.github.io/my-knowledge-base/docs/ai-integration-operations.html
+
+[Тут вставляється повний текст документа ai-integration-operations.md / html]
+
+---
+
+## Module 5: Validation Loop & Supply Automation
+URL: https://boriskirp.github.io/my-knowledge-base/docs/validation-loop-supply-automation.html
+
+[Тут вставляється повний текст документа validation-loop-supply-automation.md / html]
