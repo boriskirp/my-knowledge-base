@@ -1,6 +1,7 @@
 name: Generate llms-full.txt and Sync LLM Context
 
 on:
+  workflow_dispatch: # Дозволяє запускати вручну з вкладки Actions
   push:
     branches:
       - main
